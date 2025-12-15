@@ -1,0 +1,44 @@
+\begin{problem}{Phân vùng bộ nhớ hệ điều hành}{standard input}{standard output}{5 seconds}{512 megabytes}
+
+Cục điều phối bộ nhớ của Bộ Quốc Phòng đang thử nghiệm chip giám sát "Fenrir". Fenrir được hàn thẳng vào bus bộ nhớ và tự động duy trì \emph{các tổng tiền tố} cho từng cột trong lưới nhớ. Lớp firmware bảo mật của Fenrir chỉ cung cấp đúng hai lệnh phần cứng: \texttt{inc(c, k)} (cộng thêm $k$ tiến trình vào cột $c$) và \texttt{pref(c)} (trả về tổng số tiến trình hiện diện trong các cột từ $1$ tới $c$). Bất kỳ thuật toán nào đòi hỏi truy cập ngẫu nhiên hay cấu trúc dữ liệu khác (ví dụ segment tree) đều bị khóa và báo lỗi "không tương thích giao diện". Nghĩa là mọi xử lý số lượng tiến trình trên các đoạn cột liên tiếp đều buộc phải ghép lời giải vào các lệnh Fenrir -- chính là Fenwick tree.
+
+Bộ nhớ vật lý của hệ thống là một lưới $H \times W$ (đánh số hàng, cột từ $1$). Có $n$ tiến trình đã chiếm các ô $(r_i, c_i)$ và danh sách này được cập nhật liên tục qua chuẩn Fenrir. Mỗi đêm, Tổng trạm yêu cầu báo cáo "phân mảnh": hãy đặt đúng một đường cắt ngang giữa hai hàng liên tiếp và một đường cắt dọc giữa hai cột liên tiếp để chia lưới thành bốn miền chữ nhật. Chi phí của cấu hình là số tiến trình lớn nhất nằm trong một miền (họ sẽ chuyển tiến trình ra khỏi miền "đông dân nhất" để tái cân bằng). Nhiệm vụ của bạn là chọn vị trí hai đường cắt sao cho chi phí nhỏ nhất có thể, tuân thủ ràng buộc truy vấn/ cập nhật đúng định dạng Fenrir.
+
+
+\InputFile
+\begin{itemize}
+  \item Dòng đầu chứa hai số nguyên $H$, $W$ ($1 \le H, W \le 10^{12}$).
+  \item Dòng thứ hai chứa số nguyên $n$ ($0 \le n \le 969\,696$).
+  \item Mỗi dòng trong $n$ dòng tiếp theo chứa hai số nguyên $r_i$, $c_i$ ($1 \le r_i \le H$, $1 \le c_i \le W$) --- tọa độ ô đã bị chiếm.
+\end{itemize}
+
+\OutputFile
+In ra một số nguyên duy nhất là số tiến trình lớn nhất trong bốn miền sau khi chọn hai đường cắt tối ưu.
+
+
+\Example
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\end{example}
+
+\Note
+\begin{itemize}
+  \item Có thể có nhiều tiến trình cùng nằm trên một hàng hoặc một cột.
+  \item Nếu một miền trống, số tiến trình của miền đó được tính là $0$.
+  \item Nếu $n = 0$ thì đáp án bằng $0$.
+  \item Đường cắt có thể đặt ở bất kỳ khoảng trống nào giữa hai hàng/cột liên tiếp miễn là vẫn còn hàng/cột ở cả hai phía.
+\item \textbf{Bắt buộc:} Cổng Fenrir chỉ chấp nhận hai thao tác add/prefix, nên lời giải bắt buộc dùng cây Fenwick (BIT). Bạn phải cài đặt lời giải này bằng Python (ngôn ngữ chính của bài).
+\end{itemize}
+
+
+\textbf{Subtasks.}
+\begin{itemize}
+  \item \textbf{Subtask 1 (20 điểm):} $H, W \le 10^{12}$, $n \le 9\,696$.
+  \item \textbf{Subtask 2 (30 điểm):} $H, W \le 10^{12}$, $n \le 363\,636$.
+  \item \textbf{Subtask 3 (50 điểm):} $H, W \le 10^{12}$, $n \le 969\,696$.
+\end{itemize}
+
+
+\end{problem}
+

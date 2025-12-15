@@ -1,0 +1,16 @@
+Server của Fucs nhận được một hàng đợi gồm $N$ tác vụ cần xử lý. Vì tài nguyên CPU là hữu hạn nên chỉ có thể xử lý tuần tự từng tác vụ.
+
+Một khi CPU đã bắt đầu chạy một tác vụ, nó phải xử lý cho đến khi tác vụ đó hoàn thành \textbf{(nguyên tắc Atomic)}, không được phép ngắt quãng để chuyển sang tác vụ khác.
+
+Mỗi tác vụ $i$ đi kèm các thông tin:
+\begin{itemize}
+    \item Thời gian chạy: $r_i$
+    \item Hạn hoàn thành (Deadline): $t_i$
+    \item Lợi nhuận nếu hoàn thành đúng hạn: $p_i$
+\end{itemize}
+
+\textbf{Quy tắc:}
+Bạn có quyền chọn làm hoặc không làm một tác vụ. Nếu chọn làm, tác vụ phải hoàn thành trước hoặc đúng thời điểm $t_i$. Nếu hoàn thành sau thời điểm $t_i$, tác vụ đó coi như thất bại và không mang lại lợi nhuận ($p_i = 0$).
+
+\textbf{Nhiệm vụ:}
+Hãy lập trình chọn và sắp xếp thứ tự thực hiện các tác vụ sao cho Fucs thu được \textbf{tổng lợi nhuận lớn nhất có thể}.

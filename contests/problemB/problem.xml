@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="3" short-name="problem1" url="https://polygon.codeforces.com/p9Ik760/uraqt/problem1">
+    <names>
+        <name language="vietnamese" value="Truy Vấn Du Hành Thời Gian Trên Cơ Sở Dữ Liệu"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="vietnamese" mathjax="true" path="statements/vietnamese/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="vietnamese" mathjax="true" path="statements/.html/vietnamese/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>5000</time-limit>
+            <memory-limit>536870912</memory-limit>
+            <test-count>51</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" points="0.0" sample="true"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 1" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 2" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 3" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 4" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 5" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 6" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 7" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 8" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 9" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 10" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 11" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 12" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 13" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 14" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 15" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 16" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 17" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 18" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 19" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 1 --randomize-nm --seed 20" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 21" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 22" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 23" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 24" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 25" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 26" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 27" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 28" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 29" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 30" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 31" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 32" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 33" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 34" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 35" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 36" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 37" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 38" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 39" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 40" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 41" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 42" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 43" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 44" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 45" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 46" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 47" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 48" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 49" method="generated" points="2.0"/>
+                <test cmd="gen --subtask 2 --randomize-nm --seed 50" method="generated" points="2.0"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/main.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/main.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="sweep line"/>
+    </tags>
+</problem>

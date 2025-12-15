@@ -1,0 +1,17 @@
+AstraBank vừa hoàn tất nền tảng "Time-Orbit", cho phép bộ phận kiểm toán xem lại trạng thái database tại mọi thời điểm trong quá khứ. Đồng hồ nội bộ đếm từ mốc 0 và mỗi giao dịch $T$ có \texttt{start\_time[T]} (thời điểm bắt đầu) và \texttt{commit\_time[T]} (thời điểm commit). Với mỗi tuple, hệ thống chỉ lưu giao dịch tạo ra nó và giao dịch xóa nó (nếu có) để tái hiện trạng thái bất kỳ.
+
+\textbf{Dữ liệu log.}
+\begin{itemize}
+\item Có $N$ giao dịch. Giao dịch $T$ có \texttt{start\_time[T]} và \texttt{commit\_time[T]}; nếu \texttt{commit\_time[T]} = $-1$ thì giao dịch bị hủy.
+\item Có $M$ tuple. Tuple $j$ được tạo bởi \texttt{create\_tx[j]} và có thể bị xóa bởi \texttt{delete\_tx[j]} (hoặc $-1$ nếu chưa bị xóa).
+\item Tuple $j$ tồn tại sau khi giao dịch tạo nó commit và biến mất khi giao dịch xóa nó commit.
+\item Mọi giá trị \texttt{start\_time} và \texttt{commit\_time} (khác $-1$) đều khác nhau, và tất cả mốc thời gian là số nguyên trong $[0, 10^{12}]$.
+\end{itemize}
+
+\textbf{Nhiệm vụ.}
+\begin{itemize}
+\item Với mỗi giao dịch $T$, xác định tập tuple tồn tại tại thời điểm \texttt{start\_time[T]}.
+\item Tuple $j$ tồn tại ở thời điểm $x$ nếu giao dịch tạo $j$ đã commit không muộn hơn $x$ và chưa bị xóa, hoặc giao dịch xóa commit sau $x$.
+\end{itemize}
+
+

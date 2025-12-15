@@ -1,0 +1,30 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Truy Vấn Du H&agrave;nh Thời Gian Tr&ecirc;n Cơ Sở Dữ Liệu</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Truy Vấn Du H&agrave;nh Thời Gian Tr&ecirc;n Cơ Sở Dữ Liệu</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>5 seconds</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>512 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>AstraBank vừa ho&agrave;n tất nền tảng "Time-Orbit", cho ph&eacute;p bộ phận kiểm to&aacute;n xem lại trạng th&aacute;i database tại mọi thời điểm trong qu&aacute; khứ. Đồng hồ nội bộ đếm từ mốc 0 v&agrave; mỗi giao dịch $$$T$$$ c&oacute; <SPAN class="tex-font-style-tt">start_time[T]</SPAN> (thời điểm bắt đầu) v&agrave; <SPAN class="tex-font-style-tt">commit_time[T]</SPAN> (thời điểm commit). Với mỗi tuple, hệ thống chỉ lưu giao dịch tạo ra n&oacute; v&agrave; giao dịch x&oacute;a n&oacute; (nếu c&oacute;) để t&aacute;i hiện trạng th&aacute;i bất kỳ.</P><P><SPAN class="tex-font-style-bf">Dữ liệu log.</SPAN> </P><UL> <LI> C&oacute; $$$N$$$ giao dịch. Giao dịch $$$T$$$ c&oacute; <SPAN class="tex-font-style-tt">start_time[T]</SPAN> v&agrave; <SPAN class="tex-font-style-tt">commit_time[T]</SPAN>; nếu <SPAN class="tex-font-style-tt">commit_time[T]</SPAN> = $$$-1$$$ th&igrave; giao dịch bị hủy. </LI><LI> C&oacute; $$$M$$$ tuple. Tuple $$$j$$$ được tạo bởi <SPAN class="tex-font-style-tt">create_tx[j]</SPAN> v&agrave; c&oacute; thể bị x&oacute;a bởi <SPAN class="tex-font-style-tt">delete_tx[j]</SPAN> (hoặc $$$-1$$$ nếu chưa bị x&oacute;a). </LI><LI> Tuple $$$j$$$ tồn tại sau khi giao dịch tạo n&oacute; commit v&agrave; biến mất khi giao dịch x&oacute;a n&oacute; commit. </LI><LI> Mọi gi&aacute; trị <SPAN class="tex-font-style-tt">start_time</SPAN> v&agrave; <SPAN class="tex-font-style-tt">commit_time</SPAN> (kh&aacute;c $$$-1$$$) đều kh&aacute;c nhau, v&agrave; tất cả mốc thời gian l&agrave; số nguy&ecirc;n trong $$$[0, 10^{12}]$$$. </LI></UL><P></P><P><SPAN class="tex-font-style-bf">Nhiệm vụ.</SPAN> </P><UL> <LI> Với mỗi giao dịch $$$T$$$, x&aacute;c định tập tuple tồn tại tại thời điểm <SPAN class="tex-font-style-tt">start_time[T]</SPAN>. </LI><LI> Tuple $$$j$$$ tồn tại ở thời điểm $$$x$$$ nếu giao dịch tạo $$$j$$$ đ&atilde; commit kh&ocirc;ng muộn hơn $$$x$$$ v&agrave; chưa bị x&oacute;a, hoặc giao dịch x&oacute;a commit sau $$$x$$$. </LI></UL></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P></P><UL> <LI> D&ograve;ng 1: hai số nguy&ecirc;n $$$N, M$$$ ($$$1 \le N, M \le 161\,616$$$). </LI><LI> $$$N$$$ d&ograve;ng tiếp: <SPAN class="tex-font-style-tt">start_time[T]</SPAN> v&agrave; <SPAN class="tex-font-style-tt">commit_time[T]</SPAN> của từng giao dịch $$$T$$$ ($$$1 \le T \le N$$$). </LI><LI> $$$M$$$ d&ograve;ng tiếp: <SPAN class="tex-font-style-tt">create_tx[j]</SPAN> v&agrave; <SPAN class="tex-font-style-tt">delete_tx[j]</SPAN> (ghi $$$-1$$$ nếu chưa bị x&oacute;a) cho từng tuple $$$j$$$ ($$$1 \le j \le M$$$). </LI></UL></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P></P><UL> <LI> In $$$N$$$ d&ograve;ng; d&ograve;ng $$$T$$$ liệt k&ecirc; c&aacute;c tuple tồn tại tại thời điểm <SPAN class="tex-font-style-tt">start_time[T]</SPAN> theo thứ tự tăng dần, định dạng "<SPAN class="tex-font-style-tt">k a_1 a_2 ... a_k</SPAN>". </LI><LI> Nếu kh&ocirc;ng c&oacute; tuple n&agrave;o tồn tại, in <SPAN class="tex-font-style-tt">0</SPAN>. </LI><LI> Tổng số phần tử được in ra tr&ecirc;n to&agrave;n bộ output kh&ocirc;ng vượt qu&aacute; $$$363\,636$$$. </LI></UL></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Example</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content">
+4 2
+0 3
+4 8
+9 12
+5 -1
+1 3
+2 -1
+</PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+0
+1 1
+2 1 2
+1 1
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

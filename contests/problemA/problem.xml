@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="16" short-name="test" url="https://polygon.codeforces.com/p0aogBk/fucsdeptrai/test">
+    <names>
+        <name language="vietnamese" value="Fucs và gánh nặng mưu sinh"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="vietnamese" mathjax="true" path="statements/vietnamese/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="vietnamese" mathjax="true" path="statements/.html/vietnamese/problem.html" type="text/html"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1" treat-points-from-checker-as-percent="true">
+        <testset name="tests">
+            <time-limit>5000</time-limit>
+            <memory-limit>1073741824</memory-limit>
+            <test-count>100</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test group="1" method="manual" points="0.0" sample="true"/>
+                <test cmd="gen_sub1 1 1003" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1004" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1005" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1006" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1007" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1008" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1009" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1010" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1011" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1012" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1013" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 1 1014" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2001" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2002" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2003" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2004" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2005" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2006" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2007" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2008" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2009" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2010" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2011" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2012" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 2 2013" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3001" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3002" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3003" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3004" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3005" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3006" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3007" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3008" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3009" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3010" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3011" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 3 3012" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4001" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4002" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4003" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4004" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4005" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4006" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4007" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4008" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4009" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4010" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4011" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub1 4 4012" group="1" method="generated" points="0.0"/>
+                <test cmd="gen_sub2 1 5001" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5002" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5003" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5004" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5005" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5006" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5007" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5008" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5009" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5010" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5011" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5012" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 1 5013" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6001" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6002" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6003" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6004" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6005" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6006" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6007" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6008" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6009" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6010" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6011" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6012" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 2 6013" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7001" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7002" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7003" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7004" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7005" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7006" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7007" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7008" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7009" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7010" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7011" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 3 7012" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8001" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8002" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8003" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8004" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8005" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8006" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8007" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8008" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8009" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8010" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8011" group="2" method="generated" points="2.0"/>
+                <test cmd="gen_sub2 4 8012" group="2" method="generated" points="2.0"/>
+            </tests>
+            <groups>
+                <group feedback-policy="complete" name="1" points="0.0" points-policy="complete-group"/>
+                <group feedback-policy="points" name="2" points-policy="each-test">
+                    <dependencies>
+                        <dependency group="1"/>
+                    </dependencies>
+                </group>
+            </groups>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+            <file path="files/tutorial.tex"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_sub1.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_sub1.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen_sub2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/gen_sub2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/solution.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/solution.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="heuristics"/>
+    </tags>
+</problem>

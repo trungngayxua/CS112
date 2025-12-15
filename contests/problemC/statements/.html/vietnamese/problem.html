@@ -1,0 +1,29 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Ph&acirc;n v&ugrave;ng bộ nhớ hệ điều h&agrave;nh</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Ph&acirc;n v&ugrave;ng bộ nhớ hệ điều h&agrave;nh</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>5 seconds</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>512 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>Cục điều phối bộ nhớ của Bộ Quốc Ph&ograve;ng đang thử nghiệm chip gi&aacute;m s&aacute;t "Fenrir". Fenrir được h&agrave;n thẳng v&agrave;o bus bộ nhớ v&agrave; tự động duy tr&igrave; <SPAN class="tex-font-style-underline">c&aacute;c tổng tiền tố</SPAN> cho từng cột trong lưới nhớ. Lớp firmware bảo mật của Fenrir chỉ cung cấp đ&uacute;ng hai lệnh phần cứng: <SPAN class="tex-font-style-tt">inc(c, k)</SPAN> (cộng th&ecirc;m $$$k$$$ tiến tr&igrave;nh v&agrave;o cột $$$c$$$) v&agrave; <SPAN class="tex-font-style-tt">pref(c)</SPAN> (trả về tổng số tiến tr&igrave;nh hiện diện trong c&aacute;c cột từ $$$1$$$ tới $$$c$$$). Bất kỳ thuật to&aacute;n n&agrave;o đ&ograve;i hỏi truy cập ngẫu nhi&ecirc;n hay cấu tr&uacute;c dữ liệu kh&aacute;c (v&iacute; dụ segment tree) đều bị kh&oacute;a v&agrave; b&aacute;o lỗi "kh&ocirc;ng tương th&iacute;ch giao diện". Nghĩa l&agrave; mọi xử l&yacute; số lượng tiến tr&igrave;nh tr&ecirc;n c&aacute;c đoạn cột li&ecirc;n tiếp đều buộc phải gh&eacute;p lời giải v&agrave;o c&aacute;c lệnh Fenrir &ndash; ch&iacute;nh l&agrave; Fenwick tree.</P><P>Bộ nhớ vật l&yacute; của hệ thống l&agrave; một lưới $$$H \times W$$$ (đ&aacute;nh số h&agrave;ng, cột từ $$$1$$$). C&oacute; $$$n$$$ tiến tr&igrave;nh đ&atilde; chiếm c&aacute;c &ocirc; $$$(r_i, c_i)$$$ v&agrave; danh s&aacute;ch n&agrave;y được cập nhật li&ecirc;n tục qua chuẩn Fenrir. Mỗi đ&ecirc;m, Tổng trạm y&ecirc;u cầu b&aacute;o c&aacute;o "ph&acirc;n mảnh": h&atilde;y đặt đ&uacute;ng một đường cắt ngang giữa hai h&agrave;ng li&ecirc;n tiếp v&agrave; một đường cắt dọc giữa hai cột li&ecirc;n tiếp để chia lưới th&agrave;nh bốn miền chữ nhật. Chi ph&iacute; của cấu h&igrave;nh l&agrave; số tiến tr&igrave;nh lớn nhất nằm trong một miền (họ sẽ chuyển tiến tr&igrave;nh ra khỏi miền "đ&ocirc;ng d&acirc;n nhất" để t&aacute;i c&acirc;n bằng). Nhiệm vụ của bạn l&agrave; chọn vị tr&iacute; hai đường cắt sao cho chi ph&iacute; nhỏ nhất c&oacute; thể, tu&acirc;n thủ r&agrave;ng buộc truy vấn/ cập nhật đ&uacute;ng định dạng Fenrir.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P></P><UL> <LI> D&ograve;ng đầu chứa hai số nguy&ecirc;n $$$H$$$, $$$W$$$ ($$$1 \le H, W \le 10^{12}$$$). </LI><LI> D&ograve;ng thứ hai chứa số nguy&ecirc;n $$$n$$$ ($$$0 \le n \le 969\,696$$$). </LI><LI> Mỗi d&ograve;ng trong $$$n$$$ d&ograve;ng tiếp theo chứa hai số nguy&ecirc;n $$$r_i$$$, $$$c_i$$$ ($$$1 \le r_i \le H$$$, $$$1 \le c_i \le W$$$) &mdash; tọa độ &ocirc; đ&atilde; bị chiếm. </LI></UL></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>In ra một số nguy&ecirc;n duy nhất l&agrave; số tiến tr&igrave;nh lớn nhất trong bốn miền sau khi chọn hai đường cắt tối ưu.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Example</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content">
+20 20
+7
+7 3
+5 5
+7 13
+3 1
+11 7
+5 3
+9 1
+</PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+2
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P></P><UL> <LI> C&oacute; thể c&oacute; nhiều tiến tr&igrave;nh c&ugrave;ng nằm tr&ecirc;n một h&agrave;ng hoặc một cột. </LI><LI> Nếu một miền trống, số tiến tr&igrave;nh của miền đ&oacute; được t&iacute;nh l&agrave; $$$0$$$. </LI><LI> Nếu $$$n = 0$$$ th&igrave; đ&aacute;p &aacute;n bằng $$$0$$$. </LI><LI> Đường cắt c&oacute; thể đặt ở bất kỳ khoảng trống n&agrave;o giữa hai h&agrave;ng/cột li&ecirc;n tiếp miễn l&agrave; vẫn c&ograve;n h&agrave;ng/cột ở cả hai ph&iacute;a. </LI><LI> <SPAN class="tex-font-style-bf">Bắt buộc:</SPAN> Cổng Fenrir chỉ chấp nhận hai thao t&aacute;c add/prefix, n&ecirc;n lời giải bắt buộc d&ugrave;ng c&acirc;y Fenwick (BIT). Bạn phải c&agrave;i đặt lời giải n&agrave;y bằng Python (ng&ocirc;n ngữ ch&iacute;nh của b&agrave;i). </LI></UL><P></P><P><SPAN class="tex-font-style-bf">Subtasks.</SPAN> </P><UL> <LI> <SPAN class="tex-font-style-bf">Subtask 1 (20 điểm):</SPAN> $$$H, W \le 10^{12}$$$, $$$n \le 9\,696$$$. </LI><LI> <SPAN class="tex-font-style-bf">Subtask 2 (30 điểm):</SPAN> $$$H, W \le 10^{12}$$$, $$$n \le 363\,636$$$. </LI><LI> <SPAN class="tex-font-style-bf">Subtask 3 (50 điểm):</SPAN> $$$H, W \le 10^{12}$$$, $$$n \le 969\,696$$$. </LI></UL></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

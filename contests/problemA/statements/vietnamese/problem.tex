@@ -1,0 +1,61 @@
+\begin{problem}{Fucs và gánh nặng mưu sinh}{standard input}{standard output}{5 seconds}{1024 megabytes}
+
+Server của Fucs nhận được một hàng đợi gồm $N$ tác vụ cần xử lý. Vì tài nguyên CPU là hữu hạn nên chỉ có thể xử lý tuần tự từng tác vụ.
+
+Một khi CPU đã bắt đầu chạy một tác vụ, nó phải xử lý cho đến khi tác vụ đó hoàn thành \textbf{(nguyên tắc Atomic)}, không được phép ngắt quãng để chuyển sang tác vụ khác.
+
+Mỗi tác vụ $i$ đi kèm các thông tin:
+\begin{itemize}
+    \item Thời gian chạy: $r_i$
+    \item Hạn hoàn thành (Deadline): $t_i$
+    \item Lợi nhuận nếu hoàn thành đúng hạn: $p_i$
+\end{itemize}
+
+\textbf{Quy tắc:}
+Bạn có quyền chọn làm hoặc không làm một tác vụ. Nếu chọn làm, tác vụ phải hoàn thành trước hoặc đúng thời điểm $t_i$. Nếu hoàn thành sau thời điểm $t_i$, tác vụ đó coi như thất bại và không mang lại lợi nhuận ($p_i = 0$).
+
+\textbf{Nhiệm vụ:}
+Hãy lập trình chọn và sắp xếp thứ tự thực hiện các tác vụ sao cho Fucs thu được \textbf{tổng lợi nhuận lớn nhất có thể}.
+
+\InputFile
+\begin{itemize}
+    \item Dòng đầu tiên chứa số nguyên dương $N$.
+    \item $N$ dòng tiếp theo, mỗi dòng chứa 3 số nguyên $r_i, t_i, p_i$ tương ứng với thời gian chạy, deadline và lợi nhuận của tác vụ thứ $i$.
+\end{itemize}
+
+\OutputFile
+\begin{itemize}
+    \item Dòng đầu tiên: Ghi một số nguyên là tổng lợi nhuận lớn nhất tìm được.
+    \item Dòng thứ hai: Ghi dãy các chỉ số (ID) của các tác vụ được chọn theo thứ tự thực hiện. (ID tính từ 1 đến $N$).
+\end{itemize}
+
+\Scoring
+\textbf{Subtask 1 (Chiếm 0\% số điểm): AC subtask này là điều kiện đề tính điểm subtask2}
+\begin{itemize}
+    \item $N \le 20$
+    \item $1 \le r_i, t_i, p_i \le 10^5$
+    \item \textbf{Yêu cầu:} Bắt buộc tìm ra nghiệm \textbf{tối ưu tuyệt đối}.
+    \item \textbf{Cách tính điểm:} Chấm chính xác (Correct/Incorrect).
+\end{itemize}
+
+\textbf{Subtask 2 (Chiếm 100\% số điểm):}
+\begin{itemize}
+    \item $N \le 500$
+    \item $1 \le r_i, t_i, p_i \le 10^{12}$
+    \item \textbf{Yêu cầu:} Tìm nghiệm \textbf{gần đúng tốt nhất}.
+    \item \textbf{Cách tính điểm:} Điểm số được tính dựa trên độ lệch so với đáp án của Ban ra đề (Jury) theo công thức mũ:
+    $ \text{Score} = min(1, \left(\frac{YourAnswer}{MyAnswer}\right)^{3.6}) $
+    \textit{(Hệ số mũ 3.6 được sử dụng một cách ngẫu nhiên).}
+\end{itemize}
+
+\Example
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\end{example}
+
+\Note
+Giải thích: 50 + 100 + 200 = 350.
+
+\end{problem}
+
