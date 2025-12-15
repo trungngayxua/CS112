@@ -25,16 +25,16 @@
 ```
 .
 ├── contests/          # Bộ đề luyện contest, test scripts, checker và lời giải
-├── problems/          # Tài liệu đề bài chính thức, pdf tham khảo
-├── reports/           # Báo cáo phân tích thuật toán & kết quả thực nghiệm
+├── problems/          # Bản gốc đề bài cho từng problem (LaTeX, example, tutorial…)
+├── reports/           # Báo cáo solution của từng nhóm và theo từng bài
 ├── slides/            # Slide thuyết trình cho buổi báo cáo cuối kỳ
 └── README.md          # Hướng dẫn tổng quan repo
 ```
 
 ## Quy ước thư mục chính
 - `contests/` chứa từng bài theo cấu trúc Polygon (files/tests/solutions/scripts). Khi làm bài mới sao chép thư mục template, cập nhật `statement`, thêm test và viết code trong `check.cpp`.
-- `reports/` lưu trữ báo cáo theo tuần/contest, được viết bằng Markdown để tiện theo dõi version. Nếu cần bản PDF, export từ tài liệu này rồi đặt cùng thư mục tương ứng.
-- `problems/` giữ đề bài gốc (`debai.pdf`) hoặc tài liệu bổ sung để đối chiếu.
+- `problems/` đồng bộ trực tiếp các file đề gốc từ `contests/<problem>/statements`. Mỗi thư mục con (`problemA/`, `problemB/`, `problemC/`, …) gồm `problem.tex`, `example.01`, `tutorial.tex` (nếu có) để tiện trích dẫn/biên dịch độc lập.
+- `reports/` là nơi các nhóm/upload solution report của mình (ví dụ `reports/group-1/problemA.md`). Markdown là format chính, bản PDF nếu cần có thể export từ đó và lưu cùng thư mục.
 - `slides/` chứa file trình chiếu chính thức (`Practice Algorithm Design #3.pdf`). Nếu có phiên bản khác, đặt tên phân theo ngày cập nhật.
 
 ## Quy trình làm việc đề xuất

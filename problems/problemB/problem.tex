@@ -1,0 +1,45 @@
+\begin{problem}{Truy Vấn Du Hành Thời Gian Trên Cơ Sở Dữ Liệu}{standard input}{standard output}{5 seconds}{512 megabytes}
+
+AstraBank vừa hoàn tất nền tảng "Time-Orbit", cho phép bộ phận kiểm toán xem lại trạng thái database tại mọi thời điểm trong quá khứ. Đồng hồ nội bộ đếm từ mốc 0 và mỗi giao dịch $T$ có \texttt{start\_time[T]} (thời điểm bắt đầu) và \texttt{commit\_time[T]} (thời điểm commit). Với mỗi tuple, hệ thống chỉ lưu giao dịch tạo ra nó và giao dịch xóa nó (nếu có) để tái hiện trạng thái bất kỳ.
+
+\textbf{Dữ liệu log.}
+\begin{itemize}
+\item Có $N$ giao dịch. Giao dịch $T$ có \texttt{start\_time[T]} và \texttt{commit\_time[T]}; nếu \texttt{commit\_time[T]} = $-1$ thì giao dịch bị hủy.
+\item Có $M$ tuple. Tuple $j$ được tạo bởi \texttt{create\_tx[j]} và có thể bị xóa bởi \texttt{delete\_tx[j]} (hoặc $-1$ nếu chưa bị xóa).
+\item Tuple $j$ tồn tại sau khi giao dịch tạo nó commit và biến mất khi giao dịch xóa nó commit.
+\item Mọi giá trị \texttt{start\_time} và \texttt{commit\_time} (khác $-1$) đều khác nhau, và tất cả mốc thời gian là số nguyên trong $[0, 10^{12}]$.
+\end{itemize}
+
+\textbf{Nhiệm vụ.}
+\begin{itemize}
+\item Với mỗi giao dịch $T$, xác định tập tuple tồn tại tại thời điểm \texttt{start\_time[T]}.
+\item Tuple $j$ tồn tại ở thời điểm $x$ nếu giao dịch tạo $j$ đã commit không muộn hơn $x$ và chưa bị xóa, hoặc giao dịch xóa commit sau $x$.
+\end{itemize}
+
+
+
+
+\InputFile
+\begin{itemize}
+\item Dòng 1: hai số nguyên $N, M$ ($1 \le N, M \le 161\,616$).
+\item $N$ dòng tiếp: \texttt{start\_time[T]} và \texttt{commit\_time[T]} của từng giao dịch $T$ ($1 \le T \le N$).
+\item $M$ dòng tiếp: \texttt{create\_tx[j]} và \texttt{delete\_tx[j]} (ghi $-1$ nếu chưa bị xóa) cho từng tuple $j$ ($1 \le j \le M$).
+\end{itemize}
+
+
+\OutputFile
+\begin{itemize}
+\item In $N$ dòng; dòng $T$ liệt kê các tuple tồn tại tại thời điểm \texttt{start\_time[T]} theo thứ tự tăng dần, định dạng ``\texttt{k a\_1 a\_2 \dots a\_k}''.
+\item Nếu không có tuple nào tồn tại, in \texttt{0}.
+\item Tổng số phần tử được in ra trên toàn bộ output không vượt quá $363\,636$.
+\end{itemize}
+
+
+\Example
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\end{example}
+
+\end{problem}
+

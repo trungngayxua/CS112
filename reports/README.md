@@ -1,14 +1,28 @@
 # Reports Folder
 
-Thư mục `reports/` dùng để lưu báo cáo phân tích và đánh giá các bài trong contest. Mỗi báo cáo nên đi kèm source Markdown (`.md`) để tiện chỉnh sửa version, và nếu cần nộp PDF thì export từ cùng file này.
+Thư mục `reports/` là nơi tập hợp các báo cáo solution của từng nhóm. Mỗi nhóm có thể tạo thư mục riêng (ví dụ `group-01`, `group-02`) và trong đó viết báo cáo cho từng bài (`problemA.md`, `problemB.md`, …). Nguồn chính là Markdown (`.md`) để tiện review version; nếu cần PDF, export và đặt cạnh file `.md`.
+
+## Tổ chức khuyến nghị
+```
+reports/
+├── group-01/
+│   ├── problemA.md
+│   └── problemB.md
+├── group-02/
+│   └── problemC.md
+└── summary.md
+```
+- `group-xx/`: thư mục con cho mỗi nhóm, đặt tên theo số nhóm hoặc tên thành viên.
+- Báo cáo dùng chung định dạng để dễ so sánh giữa các nhóm.
+- Nếu có báo cáo tổng kết chung của lớp, đặt ở gốc thư mục (`summary.md`).
 
 ## Đề xuất đặt tên
-- `week-<n>.md`: tổng kết theo tuần luyện tập.
-- `contest-<problem-id>.md`: tập trung vào từng bài khó.
-- `summary.md`: báo cáo cuối kỳ tổng hợp (nếu cần).
+- `group-<id>/problem<letter>.md`: báo cáo cho từng nhóm/từng bài.
+- `week-<n>.md`: tổng kết theo tuần (nếu cần ghi chú tiến độ chung).
+- `summary.md`: báo cáo cuối kỳ tổng hợp.
 
 ## Nội dung báo cáo tối thiểu
-1. **Mô tả bài toán**: yêu cầu, ràng buộc, input/output.
+1. **Mô tả bài toán**: yêu cầu, ràng buộc, input/output (tham chiếu `problems/<problem>/problem.tex` khi cần).
 2. **Phân tích**:
    - Mô hình hoá, nhận xét đặc trưng, các hướng tiếp cận đã thử.
    - Độ phức tạp mong đợi và lý do lựa chọn thuật toán cuối cùng.
@@ -23,7 +37,7 @@ Thư mục `reports/` dùng để lưu báo cáo phân tích và đánh giá cá
 
 ## Template Markdown gợi ý
 ```markdown
-# Contest <id> – <tên bài>
+# Group <id> – Problem <letter>
 ## 1. Mô tả vấn đề
 ...
 ## 2. Phân tích & ý tưởng
@@ -36,11 +50,11 @@ Thư mục `reports/` dùng để lưu báo cáo phân tích và đánh giá cá
 | Test | Mục đích | Kết quả |
 |------|----------|---------|
 | test01 | Case n nhỏ | Passed |
-## 6. Nhận xét
+## 6. Nhận xét / So sánh nhóm khác
 ...
 ```
 
 ## Quy ước commit
-- Khi hoàn tất báo cáo cho một contest, commit kèm nhánh code/lời giải liên quan để việc truy xuất dễ dàng.
+- Khi hoàn tất báo cáo cho một contest hoặc một nhóm, commit kèm nhánh code/lời giải liên quan để việc truy xuất dễ dàng.
 - Nếu thêm hình ảnh/biểu đồ, đặt chúng trong `reports/assets/` (tạo thư mục mới nếu chưa có) và dùng đường dẫn tương đối trong Markdown.
 - Tránh lưu file nhị phân lớn không cần thiết, chỉ giữ PDF cuối cùng nếu bắt buộc phải nộp.
