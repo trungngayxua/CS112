@@ -31,7 +31,7 @@
 ```
 
 ## Quy ước thư mục chính
-- `contests/` chứa từng bài theo cấu trúc Polygon (files/tests/solutions/scripts). Khi làm bài mới sao chép thư mục template, cập nhật `statement`, thêm test và viết code trong `check.cpp`.
-- `problems/` đồng bộ trực tiếp các file đề gốc từ `contests/<problem>/statements`. Mỗi thư mục con (`problemA/`, `problemB/`, `problemC/`, …) gồm `problem.tex`, `example.01`, `tutorial.tex` (nếu có) để tiện trích dẫn/biên dịch độc lập.
-- `reports/` là nơi các nhóm/upload solution report của mình (ví dụ `reports/group-1/problemA.md`). 
-- `slides/` chứa file trình chiếu chính thức (`Practice Algorithm Design #3.pdf`). Nếu có phiên bản khác, đặt tên phân theo ngày cập nhật.
+- `contests/`: mỗi bài toán là một thư mục hoàn chỉnh gồm `statements/` (đề xuất bản Polygon), `tests/` (bộ test chính thức + checker), `solutions/` (code Python hiện tại) và `files/` (generator, validator). Nếu cần viết script build/test thì đặt trong `scripts/` hoặc `check.cpp` ngay tại thư mục bài.
+- `problems/`: bản sao thu gọn của đề gốc dùng cho việc đọc nhanh/biên dịch LaTeX. Một problem chứa `problem.tex`, file ví dụ (`example.xx`), và các phụ lục như `tutorial.tex` nếu có.
+- `reports/`: báo cáo phân tích của từng nhóm, lưu dạng Markdown; đặt tên theo `reports/<group>/problemX.md` kèm kết quả benchmark hoặc ghi chú tối ưu.
+- `slides/`: tài liệu thuyết trình chính thức và các bản nháp cập nhật theo mốc thời gian; ưu tiên file PDF để tiện chia sẻ trước buổi bảo vệ.
