@@ -1,60 +1,47 @@
 # Reports Folder
 
-Thư mục `reports/` là nơi tập hợp các báo cáo solution của từng nhóm. Mỗi nhóm có thể tạo thư mục riêng (ví dụ `group-01`, `group-02`) và trong đó viết báo cáo cho từng bài (`problemA.md`, `problemB.md`, …). Nguồn chính là Markdown (`.md`) để tiện review version; nếu cần PDF, export và đặt cạnh file `.md`.
+Thư mục `reports/` chứa **các file PDF** do từng nhóm nộp cho bài tập “A – Fucs và gánh nặng mưu sinh”.
 
-## Tổ chức khuyến nghị
+## Thông tin bài tập
+- Link bài tập: *(đặt link vào đây nếu có)*.
+- Deadline: **36h36 – 15/12/2025**.
+- Thang điểm:
+  - Codeforces: **80%** (chạy test trên hệ thống).
+  - Report (PDF): **20%**.
+
+## Yêu cầu báo cáo
+- Chỉ cần trình bày **solution cho Subtask 1 và Subtask 2** của bài A.
+- Báo cáo phải ở định dạng **PDF** (1 file cho mỗi nhóm).
+- Nội dung cần bao gồm:
+  1. **Phương pháp thiết kế thuật toán** (0.4 điểm)  
+     - Nêu rõ phương pháp (brute force, greedy, DP, heuristic/metaheuristic, …).  
+     - Giải thích nguyên lý và cách áp dụng vào subtask.
+  2. **Tính phù hợp của phương pháp** (0.4 điểm)  
+     - Giải thích vì sao phương pháp hợp lý cho từng subtask.  
+     - Nếu Subtask 2 dùng heuristic/metaheuristic: nêu tên thuật toán (VD: Local Search, IG, GA...), lý do chọn, thông số (temperature, mutation rate, iterations, …) và lý do cấu hình.
+  3. **Phân tích độ phức tạp** (0.2 điểm)  
+     - Đánh giá thời gian & bộ nhớ cho từng subtask.
+
+## Cấu trúc thư mục
 ```
 reports/
-├── group-01/
-│   ├── problemA.md
-│   └── problemB.md
-├── group-02/
-│   └── problemC.md
-└── summary.md
+├── README.md
+├── group-01/        # PDF của nhóm 01 (đặt tên theo nhóm)
+│   └── .gitkeep     # Thay bằng <group-01>-problemA-subtasks.pdf
+└── group-02/
+    └── .gitkeep
 ```
-- `group-xx/`: thư mục con cho mỗi nhóm, đặt tên theo số nhóm hoặc tên thành viên.
-- Báo cáo dùng chung định dạng để dễ so sánh giữa các nhóm.
-- Nếu có báo cáo tổng kết chung của lớp, đặt ở gốc thư mục (`summary.md`).
+- Mỗi nhóm tạo **thư mục riêng** `group-<id>/` và đặt 1 file PDF duy nhất bên trong.
+- Khi thêm PDF, xoá file `.gitkeep` tương ứng để tránh thừa file.
 
-## Đề xuất đặt tên
-- `group-<id>/problem<letter>.md`: báo cáo cho từng nhóm/từng bài.
-- `week-<n>.md`: tổng kết theo tuần (nếu cần ghi chú tiến độ chung).
-- `summary.md`: báo cáo cuối kỳ tổng hợp.
+## Quy tắc nộp báo cáo
+1. Đặt tên file: `group-<id>-problemA-subtasks.pdf` (ví dụ `group-01-problemA-subtasks.pdf`).
+2. Nếu cần cập nhật, ghi rõ phiên bản trong commit message (VD: `update group-01 report v2`).
+3. Không lưu file Markdown/tài liệu phụ trong thư mục nhóm – chỉ PDF cuối cùng.
+4. Khi nộp bản PDF mới, đảm bảo code tương ứng trong `contests/problemA` đã được cập nhật để đối chiếu với kết quả Codeforces.
 
-## Nội dung báo cáo tối thiểu
-1. **Mô tả bài toán**: yêu cầu, ràng buộc, input/output (tham chiếu `problems/<problem>/problem.tex` khi cần).
-2. **Phân tích**:
-   - Mô hình hoá, nhận xét đặc trưng, các hướng tiếp cận đã thử.
-   - Độ phức tạp mong đợi và lý do lựa chọn thuật toán cuối cùng.
-3. **Thuật toán/giải pháp**:
-   - Pseudocode hoặc flow mô tả rõ ràng.
-   - Phân tích chứng minh tính đúng (đối với Greedy/DP cần giải thích bất biến).
-4. **Độ phức tạp**: nêu rõ O(...) theo input.
-5. **Kiểm thử**:
-   - Bảng test tiêu biểu (test id, mô tả, kết quả).
-   - Bất kỳ corner case nào phát hiện được.
-6. **Đánh giá & mở rộng**: những cải tiến có thể làm, ghi chú bug hoặc câu hỏi mở.
-
-## Template Markdown gợi ý
-```markdown
-# Group <id> – Problem <letter>
-## 1. Mô tả vấn đề
-...
-## 2. Phân tích & ý tưởng
-...
-## 3. Thuật toán / Pseudocode
-...
-## 4. Độ phức tạp
-...
-## 5. Kiểm thử
-| Test | Mục đích | Kết quả |
-|------|----------|---------|
-| test01 | Case n nhỏ | Passed |
-## 6. Nhận xét / So sánh nhóm khác
-...
-```
-
-## Quy ước commit
-- Khi hoàn tất báo cáo cho một contest hoặc một nhóm, commit kèm nhánh code/lời giải liên quan để việc truy xuất dễ dàng.
-- Nếu thêm hình ảnh/biểu đồ, đặt chúng trong `reports/assets/` (tạo thư mục mới nếu chưa có) và dùng đường dẫn tương đối trong Markdown.
-- Tránh lưu file nhị phân lớn không cần thiết, chỉ giữ PDF cuối cùng nếu bắt buộc phải nộp.
+## Checklist trước khi nộp
+- [ ] Kiểm tra code đậu 80% điểm trên Codeforces (nếu có subtask online).  
+- [ ] Báo cáo mô tả đầy đủ tiêu chí (phương pháp, phù hợp, độ phức tạp).  
+- [ ] File PDF đặt đúng thư mục và tên.  
+- [ ] Commit/push cả code và PDF trước deadline 36h36 15/12/2025.
