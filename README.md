@@ -17,8 +17,8 @@
 
 ### Kiến thức áp dụng
 - **Problem A – Fucs và gánh nặng mưu sinh:** Iterated Greedy kết hợp Simulated Annealing, phá/hàn lời giải theo deadline và chọn tác vụ dựa trên tỉ lệ `p/r` để xử lý Subtask 1–2.
-- **Problem B – Version Control Timeline:** Event sweeping trên trục thời gian với `std::set` lưu các transaction đang mở, truy vấn trạng thái ngay tại thời điểm commit.
-- **Problem C – Balanced Pasture:** Nén toạ độ và Fenwick Tree đôi để đếm số điểm từng phía, kết hợp binary lifting trên prefix BIT nhằm tìm đường cắt cân bằng.
+- **Problem B – Truy Vấn Du Hành Thời Gian Trên CSDL:** Event sweeping trên trục thời gian với `std::set` lưu các transaction đang mở, truy vấn trạng thái ngay tại thời điểm commit.
+- **Problem C – Phân vùng bộ nhớ hệ điều hành:** Nén toạ độ và Fenwick Tree đôi để đếm số điểm từng phía, kết hợp binary lifting trên prefix BIT nhằm tìm đường cắt cân bằng.
 
 ## Cấu trúc kho mã
 ```
