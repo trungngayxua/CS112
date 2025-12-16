@@ -1,0 +1,33 @@
+Nhận xét theo rubric (0,4 Phương pháp thiết kế, 0,4 Tính phù hợp, 0,2 Độ phức tạp):
+
+| Codeforce | Tiêu chí 1 | Tiêu chí 2 | Tiêu chí 3 | Điểm tổng | Nhận xét chi tiết |
+|-----------|------------|------------|------------|-----------|-------------------|
+| group2    | 0,40       | 0,40       | 0,20       | 1,00      | DP theo cặp (R,P) kết hợp Pareto pruning mô tả chi tiết, chạy exact cho cả hai subtask và phân tích O(N^2)/O(N^2) bộ nhớ; đáp ứng trọn vẹn. |
+| group3    | 0,40       | 0,40       | 0,20       | 1,00      | DFS exact + Randomized Greedy Repair mô tả rõ pipeline, liên hệ chặt với từng subtask và phân tích O(2^n)+O(n log n); đạt đủ rubric. |
+| group4    | 0,40       | 0,40       | 0,20       | 1,00      | Branch & Bound + Transfer-and-Conquer + ALNS trình bày chi tiết, chiến lược tham số thuyết phục (nêu rõ điểm yếu GA) và phân tích từng subtask. |
+| group5    | 0,40       | 0,40       | 0,20       | 1,00      | Backtracking/Branch-and-Bound và Beam Search được mô tả rành mạch, có lý do chọn cho từng subtask và phân tích O(2^n), O(N·W log W). |
+| group16   | 0,40       | 0,40       | 0,20       | 1,00      | Bitmask brute force cho subtask nhỏ và IG+SA cho subtask lớn trình bày đủ chu trình, thông số và độ phức tạp O(2^n·n log n)/O(K·N). |
+| group9    | 0,38       | 0,38       | 0,20       | 0,96      | Có Backtracking và Beam Search + Pareto pruning nhưng thiếu chi tiết lưu trạng thái/bộ nhớ cho subtask lớn nên chưa trọn vẹn rubric. |
+| group11   | 0,28       | 0,27       | 0,20       | 0,75      | Chỉ mô tả Beam Search chung chung, thiếu phương pháp exact cho Subtask 1 và không tách phân tích độ phức tạp; cần bổ sung. |
+
+Bảng điểm gốc (thang 4-4-2):
+| Nhóm   | Phương pháp (4) | Tính phù hợp (4) | Độ phức tạp (2) | Tổng gốc |
+|--------|------------------|------------------|------------------|----------|
+| group2 | 4,0              | 4,0              | 2,0              | 10,0     |
+| group4 | 4,0              | 4,0              | 2,0              | 10,0     |
+| group3 | 4,0              | 4,0              | 2,0              | 10,0     |
+| group16| 4,0              | 4,0              | 2,0              | 10,0     |
+| group5 | 4,0              | 4,0              | 2,0              | 10,0     |
+| group9 | 3,2              | 3,1              | 1,9              | 8,2      |
+| group11| 2,4              | 2,4              | 2,0              | 6,8      |
+
+Scale tuyến tính để điểm thấp nhất = 9,6 (score_scaled = 8,75 + 0,125 × score_gốc):
+| Nhóm   | Điểm sau scale |
+|--------|----------------|
+| group11| 9,60           |
+| group9 | 9,78           |
+| group5 | 9,88           |
+| group16| 9,95           |
+| group3 | 9,98           |
+| group4 | 10,00          |
+| group2 | 10,00          |
